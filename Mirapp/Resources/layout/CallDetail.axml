@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:id="@+id/relativeLayout2">
+        <ImageView
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:paddingRight="10dp"
+            android:background="@drawable/b" />
+        <TextView
+            android:text="ORA-00604: özyinelemeli 1 SQL düzeyinde hata oluştu ORA-06502: PL/SQL: sayısal veya değer hatası ORA-06512: konum  satır 148 ORA-00604: özyinelemeli 1 SQL düzeyinde hata oluştu "
+            android:textSize="12dp"
+            android:textColor="@android:color/white"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:paddingLeft="60dp"
+            android:gravity="left"
+            android:id="@+id/CallNumber" />
+    </RelativeLayout>
+    <TextView
+        android:text="Text"
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:id="@+id/TotalCall" />
+</LinearLayout>

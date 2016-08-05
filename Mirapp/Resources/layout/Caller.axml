@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout1">
+        <Button
+            android:text="Butto1n"
+            android:minWidth="100dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Button2"
+            android:minWidth="100dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button2" />
+    </FrameLayout>
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout2">
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button2" />
+    </FrameLayout>
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout3">
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button3" />
+    </FrameLayout>
+</LinearLayout>
