@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
 
 namespace Mirapp
@@ -21,8 +15,8 @@ namespace Mirapp
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-            AddTab("Tab 1", Resource.Drawable.minus_32, new SampleTabFragment());
-            AddTab("Tab 2", Resource.Drawable.plus_32, new SampleTabFragment2());
+            AddTab("Tab 1", Resource.Drawable.minus_32, new ListTabFragment());
+            AddTab("Tab 2", Resource.Drawable.plus_32, new TabFragment2());
 
         }
 
@@ -42,53 +36,8 @@ namespace Mirapp
             };
             tab.TabUnselected += (sender, e) => e.FragmentTransaction.Remove(view);
 
-            this.ActionBar.AddTab(tab);
+            ActionBar.AddTab(tab);
         }
-
-
-        class SampleTabFragment : BaseFragment
-        {
-            public override void OnActivityCreated(Bundle savedInstanceState)
-            {
-                base.OnActivityCreated(savedInstanceState);
-
-                FindViews();
-
-                HandleEvents();
-
-                IList<string> phoneNumbers = new List<string>();
-                for (int i = 0; i < 10; i++)
-                {
-                    phoneNumbers.Add(String.Format("{0} number", i));
-                }
-
-                listView.Adapter= new HomeScreenAdapter(this.Activity, phoneNumbers);
-            }
-
-            public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            {
-                base.OnCreateView(inflater, container, savedInstanceState);
-                var view = inflater.Inflate(Resource.Layout.List, container, false);
-
-                return view;
-            }
-        }
-
-        class SampleTabFragment2 : BaseFragment
-        {
-            public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            {
-                base.OnCreateView(inflater, container, savedInstanceState);
-
-                var view = inflater.Inflate(Resource.Layout.Tab, container, false);
-                var sampleTextView = view.FindViewById<TextView>(Resource.Id.sampleTextView);
-                sampleTextView.Text = "sample fragment text 2";
-
-                return view;
-            }
-        }
-
-
 
 
     }
