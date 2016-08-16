@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+  <TextView
+      android:text="DİL"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/FROMText" />
+  <TextView
+      android:background="#FFFFFF"
+       android:textSize="15dp"
+       android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"  />
+  <Spinner
+      android:id="@+id/spinner"
+      android:background="#E0E0E0"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:prompt="@string/language_prompt" />
+  <TextView
+      android:background="#FFFFFF"
+       android:textSize="15dp"
+       android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"  />
+  <TextView
+      android:text="FROM"
+      android:layout_width="fill_parent"
+        android:textColor="@android:color/black"
+      android:layout_height="wrap_content"
+      android:id="@+id/FROMText" />
+  <EditText
+      android:layout_width="fill_parent"
+      android:background="#E0E0E0"
+        android:textColor="@android:color/black"
+      android:layout_height="wrap_content"
+      android:id="@+id/WordText" />
+  <TextView
+      android:background="#FFFFFF"
+       android:textSize="5dp"
+       android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"  />
+  <TextView
+      android:text="TO"
+        android:textColor="@android:color/black"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/TOText" />
+  <EditText
+      android:layout_width="fill_parent"
+        android:textColor="@android:color/black"
+      android:background="#E0E0E0"
+      android:layout_height="wrap_content"
+      android:id="@+id/TranslatedWordText" />
+  <TextView
+      android:background="#FFFFFF"
+       android:textSize="15dp"
+       android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"  />
+  <Button
+      android:text="ADD"
+   android:textColor="@android:color/white"
+      android:background="#0091EA"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/DictionaryAddButton" />
+  <TextView
+      android:background="#FFFFFF"
+       android:textSize="15dp"
+       android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"  />
+  <Button
+       android:text="DELETE" android:visibility="invisible"
+       android:background="#F44336"
+     android:textColor="@android:color/white"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/DictionaryDeleteButton" />
+
+</LinearLayout>

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="#F44336"
     android:minWidth="25px"
     android:minHeight="25px">
     <RelativeLayout
@@ -16,7 +16,7 @@
             android:layout_width="20dip"
             android:layout_height="20dip"
             android:paddingRight="10dp"
-            android:background="@drawable/b" />
+            android:background="@drawable/icon" />
         <TextView
             android:text="ORA-00604: özyinelemeli 1 SQL düzeyinde hata oluştu ORA-06502: PL/SQL: sayısal veya değer hatası ORA-06512: konum  satır 148 ORA-00604: özyinelemeli 1 SQL düzeyinde hata oluştu "
             android:textSize="12dp"

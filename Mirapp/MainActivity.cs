@@ -1,4 +1,6 @@
 ﻿using Android.App;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.OS;
 
 namespace Mirapp
@@ -14,9 +16,10 @@ namespace Mirapp
             SetContentView(Resource.Layout.Main);
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-
-            AddTab("Tab 1", Resource.Drawable.minus_32, new ListTabFragment());
-            AddTab("Tab 2", Resource.Drawable.plus_32, new TabFragment2());
+            
+            AddTab("Add", Resource.Drawable.arrowup, new DictonaryFragment());
+            AddTab("List", Resource.Drawable.arrowdown, new DictonaryListFragment());
+            AddTab("Game", Resource.Drawable.arrowdown, new DictionaryGameFragment());
 
         }
 
@@ -24,7 +27,7 @@ namespace Mirapp
         {
             var tab = ActionBar.NewTab();
             tab.SetText(tabText);
-            tab.SetIcon(iconResourceId);
+            //tab.SetIcon(iconResourceId);
 
             // must set event handler before adding tab
             tab.TabSelected += (sender, e) =>

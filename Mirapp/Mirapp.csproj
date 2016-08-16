@@ -50,7 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity\CallHistoryListActivity.cs" />
+    <Compile Include="Activity\DictionaryActivity.cs" />
+    <Compile Include="Adapter\DictonaryListAdapter.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\SQLite.cs" />
     <Compile Include="Fragment\BaseFragment.cs" />
+    <Compile Include="Fragment\DictionaryGameFragment.cs" />
+    <Compile Include="Fragment\DictonaryFragment.cs" />
+    <Compile Include="Fragment\DictonaryListFragment.cs" />
     <Compile Include="Fragment\ListTabFragment.cs" />
     <Compile Include="Fragment\TabFragment2.cs" />
     <Compile Include="Adapter\ListAdapter.cs" />
@@ -65,9 +72,23 @@
     <AndroidResource Include="Resources\layout\CallDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Caller.axml" />
+    <AndroidResource Include="Resources\layout\Caller.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\Tab.axml" />
     <AndroidResource Include="Resources\layout\List.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dictonary.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DictionaryListRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DictonaryGame.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DictonaryDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -103,7 +124,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\plus_32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrowup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrowdown.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

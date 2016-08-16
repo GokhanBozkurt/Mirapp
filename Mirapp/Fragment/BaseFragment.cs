@@ -2,6 +2,7 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Mirapp.Data;
 
 namespace Mirapp
 {
@@ -9,18 +10,20 @@ namespace Mirapp
     {
         protected ListView listView;
 
-        protected void HandleEvents()
+        protected virtual void HandleEvents()
         {
-            listView.ItemClick += listView_ItemClick;
+            if (listView!=null)
+            {
+                //listView.ItemClick += listView_ItemClick;
+                //listView.ItemLongClick += listView_ItemLongClick;
+            }
+            
         }
 
-        private void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-        }
-
-        protected void FindViews()
+        protected virtual  void FindViews()
         {
             listView = this.View.FindViewById<ListView>(Mirapp.Resource.Id.Listview1);
+            listView.ChoiceMode = ChoiceMode.Single;
 
         }
     }
