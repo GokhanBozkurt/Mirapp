@@ -4,7 +4,6 @@ using System.Linq;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Mirapp.Data;
 
 namespace Mirapp 
 {

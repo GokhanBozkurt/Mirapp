@@ -17,9 +17,9 @@ namespace Mirapp
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             
-            AddTab("Add", Resource.Drawable.arrowup, new DictonaryFragment());
-            AddTab("List", Resource.Drawable.arrowdown, new DictonaryListFragment());
-            AddTab("Game", Resource.Drawable.arrowdown, new DictionaryGameFragment());
+            AddTab("Add", 0, new DictonaryFragment());
+            AddTab("List", 0, new DictonaryListFragment());
+            AddTab("Game", 0, new DictionaryGameFragment());
 
         }
 

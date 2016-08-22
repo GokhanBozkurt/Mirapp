@@ -11,30 +11,13 @@ using Android.Views;
 using Android.Widget;
 using SQLite;
 
-namespace Mirapp.Data
+namespace Mirapp
 {
-    public class DictonaryWords
-    {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
-
-        public string Word { get; set; }
-
-        public string TranslatedWord { get; set; }
-
-        public string Language { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("Word={0}  TranslatedWord={1} ", Word, TranslatedWord);
-        }
-    }
-
     class Repository<T>
     {
         private SQLiteConnection connection;
         public SQLiteException RepositoryException { get; private set; }
-
+           
         private string path
         {
             get

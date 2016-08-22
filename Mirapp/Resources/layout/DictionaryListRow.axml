@@ -1,23 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:background="@drawable/list_item_bg"
+android:layout_height="72dp">
+<ImageView
+      android:id="@+id/list_icon"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_margin="6dp"
+      android:src="@drawable/book48"
+      android:background="@drawable/list_icon_bg"/>
+  <LinearLayout 
+      android:orientation="vertical"
+      android:gravity="bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@+id/list_icon"
+      >
     <TextView
-        android:text=""
-        android:textSize="12dp"
-        android:textColor="@android:color/black"
-        android:layout_width="match_parent"
+        android:id="@+id/DictonaryRowLangugae"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:id="@+id/DictonaryRowWord" />
-
-  <TextView
-        android:text="----------------------------------"
+        android:textColor="#000000"
         android:textSize="12dp"
-        android:textColor="@android:color/black"
-        android:layout_width="match_parent"
+        android:paddingRight="6dp"
+        android:text="" />
+    <TextView
+        android:id="@+id/DictonaryRowWord"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:id="@+id/DictonaryRowWord" />
-</LinearLayout>
+        android:textColor="#757575"
+        android:textSize="12dp"
+        android:paddingRight="6dp"
+        android:text="Sample Text" />
+  </LinearLayout>
+</RelativeLayout>

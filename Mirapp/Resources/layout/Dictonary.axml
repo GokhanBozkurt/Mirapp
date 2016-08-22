@@ -15,8 +15,8 @@
        android:textColor="@android:color/white"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"  />
-  <Spinner
-      android:id="@+id/spinner"
+  <Spinner 
+      android:id="@+id/spinner"   
       android:background="#E0E0E0"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
@@ -33,10 +33,11 @@
         android:textColor="@android:color/black"
       android:layout_height="wrap_content"
       android:id="@+id/FROMText" />
-  <EditText
+  <EditText 
       android:layout_width="fill_parent"
+      android:textSize="25dp"
       android:background="#E0E0E0"
-        android:textColor="@android:color/black"
+      android:textColor="@android:color/black"
       android:layout_height="wrap_content"
       android:id="@+id/WordText" />
   <TextView
@@ -53,7 +54,8 @@
       android:id="@+id/TOText" />
   <EditText
       android:layout_width="fill_parent"
-        android:textColor="@android:color/black"
+      android:textColor="@android:color/black"
+      android:textSize="25dp"
       android:background="#E0E0E0"
       android:layout_height="wrap_content"
       android:id="@+id/TranslatedWordText" />

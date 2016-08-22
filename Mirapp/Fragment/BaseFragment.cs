@@ -2,8 +2,6 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Mirapp.Data;
-
 namespace Mirapp
 {
     public class BaseFragment : Fragment
