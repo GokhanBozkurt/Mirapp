@@ -5,7 +5,7 @@ using Android.OS;
 
 namespace Mirapp
 {
-    [Activity(Label = "Mirapp", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Mirapp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light.DialogWhenLarge")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

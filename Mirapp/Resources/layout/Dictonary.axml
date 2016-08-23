@@ -6,12 +6,13 @@
     android:layout_height="match_parent">
   <TextView
       android:text="DİL"
+      android:textSize="20dp"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:id="@+id/FROMText" />
   <TextView
       android:background="#FFFFFF"
-       android:textSize="15dp"
+       android:textSize="5dp"
        android:textColor="@android:color/white"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"  />
@@ -29,13 +30,14 @@
       android:layout_height="wrap_content"  />
   <TextView
       android:text="FROM"
-      android:layout_width="fill_parent"
-        android:textColor="@android:color/black"
+      android:textSize="15dp"
+      android:layout_width="fill_parent" 
+        android:textColor="#E0E0E0"
       android:layout_height="wrap_content"
       android:id="@+id/FROMText" />
   <EditText 
       android:layout_width="fill_parent"
-      android:textSize="25dp"
+      android:textSize="20dp"
       android:background="#E0E0E0"
       android:textColor="@android:color/black"
       android:layout_height="wrap_content"
@@ -48,14 +50,15 @@
       android:layout_height="wrap_content"  />
   <TextView
       android:text="TO"
-        android:textColor="@android:color/black"
+      android:textSize="15dp"
+        android:textColor="#E0E0E0"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:id="@+id/TOText" />
   <EditText
       android:layout_width="fill_parent"
       android:textColor="@android:color/black"
-      android:textSize="25dp"
+      android:textSize="20dp"
       android:background="#E0E0E0"
       android:layout_height="wrap_content"
       android:id="@+id/TranslatedWordText" />

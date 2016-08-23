@@ -7,7 +7,7 @@ using Android.Widget;
 
 namespace Mirapp 
 {
-    [Activity(Label = "edsfs")]
+    [Activity(Label = "Word Edit", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.NoActionBar")]
     public class DictionaryActivity : Activity
     {
         private EditText WordText;
@@ -27,7 +27,7 @@ namespace Mirapp
 
             FindViews();
 
-            HandleEvents();
+            HandleEvents();            
 
             if (Intent.Extras.GetInt("wordId") != 0)
             {
@@ -42,7 +42,11 @@ namespace Mirapp
                 DictionaryDeleteButton.Visibility=ViewStates.Visible;
             }
 
+
+
         }
+
+        
 
         protected void FindViews()
         {

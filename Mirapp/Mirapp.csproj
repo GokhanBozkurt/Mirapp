@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="Activity\CallHistoryListActivity.cs" />
     <Compile Include="Activity\DictionaryActivity.cs" />
+    <Compile Include="Activity\DictionaryGameOverActivity.cs" />
+    <Compile Include="Activity\DictonaryGameActivity.cs" />
     <Compile Include="Adapter\DictonaryListAdapter.cs" />
     <Compile Include="Data\DictonaryWords.cs" />
     <Compile Include="Data\Repository.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Fragment\DictionaryGameFragment.cs" />
     <Compile Include="Fragment\DictonaryFragment.cs" />
     <Compile Include="Fragment\DictonaryListFragment.cs" />
+    <Compile Include="Fragment\GameLevels.cs" />
     <Compile Include="Fragment\ListTabFragment.cs" />
     <Compile Include="Fragment\TabFragment2.cs" />
     <Compile Include="Adapter\ListAdapter.cs" />
@@ -99,6 +102,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DictonaryDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DictionaryGameOver.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -146,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\spinner_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\DictonaryGameStart.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

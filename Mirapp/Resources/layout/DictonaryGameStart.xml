@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+  <TextView
+      android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+  <Spinner
+      android:id="@+id/DictionaryGameSpinner"
+      android:background="#03A9F4"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:prompt="@string/language_prompt" />
+  <TextView
+      android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+  <Button
+      android:text="EASY"
+      android:textSize="17dp"
+      android:background="#E91E63"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/DictionaryEasyGameStartButton" />
+  <TextView
+      android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+  <Button
+       android:text="MIDDLE"
+       android:textSize="17dp"
+       android:background="#E91E63"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/DictionaryMiddleGameStartButton" />
+  <TextView
+      android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+  <Button
+      android:text="HARD"
+      android:textSize="17dp"
+      android:background="#E91E63"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/DictionaryHardGameStartButton" />
+  <TextView
+      android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+</LinearLayout>
