@@ -168,7 +168,7 @@ namespace Mirapp
                     ListDictonaryWords = PrepareWordList(repository.GetRecords(), dictonaryWords);
                     if (ListDictonaryWords.Count < 4)
                     {
-                        var toast = Toast.MakeText(this, "Please enter word. There is not enough word for starting game.", ToastLength.Short);
+                        var toast = Toast.MakeText(this, "Please enter word. There is not enough WordList for starting game.", ToastLength.Short);
                         toast.Show();
                         LoadMain();
                         return;

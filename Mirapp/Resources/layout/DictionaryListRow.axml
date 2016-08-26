@@ -7,7 +7,7 @@ android:layout_height="72dp">
       android:layout_width="48dp"
       android:layout_height="48dp"
       android:layout_margin="6dp"
-      android:src="@drawable/book48"
+      android:src="@drawable/listitem"
       android:background="@drawable/list_icon_bg"/>
   <LinearLayout 
       android:orientation="vertical"
@@ -17,7 +17,7 @@ android:layout_height="72dp">
       android:layout_toRightOf="@+id/list_icon"
       >
     <TextView
-        android:id="@+id/DictonaryRowLangugae"
+        android:id="@+id/DictonaryRowWordID" android:visibility="invisible"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#000000"

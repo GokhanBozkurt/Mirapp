@@ -17,8 +17,8 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"  />
   <Spinner 
-      android:id="@+id/spinner"   
-      android:background="#E0E0E0"
+      android:id="@+id/spinner"    
+      android:background="#757575"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:prompt="@string/language_prompt" />
@@ -32,16 +32,19 @@
       android:text="FROM"
       android:textSize="15dp"
       android:layout_width="fill_parent" 
-        android:textColor="#E0E0E0"
+        android:textColor="#757575"
       android:layout_height="wrap_content"
       android:id="@+id/FROMText" />
-  <EditText 
-      android:layout_width="fill_parent"
-      android:textSize="20dp"
-      android:background="#E0E0E0"
-      android:textColor="@android:color/black"
-      android:layout_height="wrap_content"
-      android:id="@+id/WordText" />
+  <AutoCompleteTextView
+       android:hint="Word..."
+       android:id="@+id/WordTextAutoComplete"
+       android:textColor="@android:color/white"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:background="#757575"
+       android:scrollbarStyle="outsideOverlay"
+       android:textSize="18dip"
+       android:selectAllOnFocus="true" />
   <TextView
       android:background="#FFFFFF"
        android:textSize="5dp"
@@ -51,15 +54,15 @@
   <TextView
       android:text="TO"
       android:textSize="15dp"
-        android:textColor="#E0E0E0"
+        android:textColor="#757575"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:id="@+id/TOText" />
   <EditText
       android:layout_width="fill_parent"
-      android:textColor="@android:color/black"
-      android:textSize="20dp"
-      android:background="#E0E0E0"
+      android:textColor="@android:color/white"
+      android:textSize="18dp"
+      android:background="#757575"
       android:layout_height="wrap_content"
       android:id="@+id/TranslatedWordText" />
   <TextView
@@ -81,6 +84,7 @@
        android:textColor="@android:color/white"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"  />
+
   <Button
        android:text="DELETE" android:visibility="invisible"
        android:background="#F44336"
@@ -88,5 +92,19 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/DictionaryDeleteButton" />
+  <TextView
+     android:background="#FFFFFF"
+      android:textSize="15dp"
+      android:textColor="@android:color/white"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"  />
+  <Button
+     android:text="Translate"  android:visibility="invisible"
+  android:textColor="@android:color/white"
+     android:background="#0091EA"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/TranslateButton" />
+ 
 
 </LinearLayout>

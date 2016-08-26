@@ -52,13 +52,17 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Json" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity\CallHistoryListActivity.cs" />
     <Compile Include="Activity\DictionaryActivity.cs" />
     <Compile Include="Activity\DictionaryGameOverActivity.cs" />
     <Compile Include="Activity\DictonaryGameActivity.cs" />
@@ -67,27 +71,23 @@
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Data\SQLite.cs" />
     <Compile Include="Fragment\BaseFragment.cs" />
+    <Compile Include="RestService\TranslateService\Control.cs" />
     <Compile Include="Fragment\DictionaryGameFragment.cs" />
     <Compile Include="Fragment\DictonaryFragment.cs" />
     <Compile Include="Fragment\DictonaryListFragment.cs" />
     <Compile Include="Fragment\GameLevels.cs" />
-    <Compile Include="Fragment\ListTabFragment.cs" />
-    <Compile Include="Fragment\TabFragment2.cs" />
-    <Compile Include="Adapter\ListAdapter.cs" />
+    <Compile Include="RestService\TranslateService\Translater.cs" />
+    <Compile Include="RestService\TranslateService\TranslatedWord.cs" />
+    <Compile Include="RestService\TranslateService\Word.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
+    <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\CallDetail.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\Caller.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\logo.png" />
     <AndroidResource Include="Resources\layout\Tab.axml" />
     <AndroidResource Include="Resources\layout\List.axml">
       <SubType>Designer</SubType>
@@ -107,6 +107,9 @@
     <AndroidResource Include="Resources\layout\DictionaryGameOver.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\WordListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -119,21 +122,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Iconold.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\minus_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\plus_32.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\list_item_bg.xml" />
@@ -155,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\DictonaryGameStart.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\listitem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

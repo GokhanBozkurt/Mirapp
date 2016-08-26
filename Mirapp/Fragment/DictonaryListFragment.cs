@@ -38,10 +38,10 @@ namespace Mirapp
 
         private void listView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
-            var CurrentItem = ListDictonaryWords[e.Position];
+            var DictonaryRowWordID = e.View.FindViewById<TextView>(Resource.Id.DictonaryRowWordID);
             var intent=new Intent();
             intent.SetClass(this.Activity, typeof(DictionaryActivity));
-            intent.PutExtra("wordId", CurrentItem.ID);
+            intent.PutExtra("wordId", Convert.ToInt32(DictonaryRowWordID.Text));
 
             StartActivityForResult(intent,100);
         }
@@ -65,7 +65,7 @@ namespace Mirapp
             ListDictonaryWords = repository.GetRecords();
             if (ListDictonaryWords != null)
             {
-                listView.Adapter = new DictonaryListAdapter(this.Activity, ListDictonaryWords);
+                listView.Adapter = new DictonaryListAdapter(this.Activity, ListDictonaryWords.OrderBy(a=>a.Language).ThenBy(b=>b.Word).ThenBy(c=>c.TranslatedWord).ToList());
             }
         }
     }

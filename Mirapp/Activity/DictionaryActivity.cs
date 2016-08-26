@@ -10,7 +10,7 @@ namespace Mirapp
     [Activity(Label = "Word Edit", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.NoActionBar")]
     public class DictionaryActivity : Activity
     {
-        private EditText WordText;
+        private AutoCompleteTextView WordText;
         private Button DictionaryAddButton;
         private EditText TranslatedWordText;
         private Spinner spinner;
@@ -50,7 +50,7 @@ namespace Mirapp
 
         protected void FindViews()
         {
-            WordText = FindViewById<EditText>(Mirapp.Resource.Id.WordText);
+            WordText = FindViewById<AutoCompleteTextView>(Mirapp.Resource.Id.WordTextAutoComplete);
             TranslatedWordText = FindViewById<EditText>(Mirapp.Resource.Id.TranslatedWordText);
             spinner = FindViewById<Spinner>(Mirapp.Resource.Id.spinner);
             DictionaryAddButton = FindViewById<Button>(Mirapp.Resource.Id.DictionaryAddButton);

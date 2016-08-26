@@ -34,7 +34,7 @@ namespace Mirapp
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View view = convertView ?? context.LayoutInflater.Inflate(Resource.Layout.DictionaryListRow, null); 
-            //view.FindViewById<TextView>(Resource.Id.DictonaryRowLangugae).Text = items[position].Language;
+            view.FindViewById<TextView>(Resource.Id.DictonaryRowWordID).Text = items[position].ID.ToString();
             view.FindViewById<TextView>(Resource.Id.DictonaryRowWord).Text = items[position].ToString().ToUpper();
             return view;
         }

@@ -188,7 +188,7 @@ namespace Mirapp
             {
                 var db = new SQLiteConnection(path);
                 var records = db.Table<DictonaryWords>().Where(a=> a.ID== dictonaryWords.ID);
-                return records.FirstOrDefault();
+                return records.First();
 
             }
             catch (SQLiteException)
