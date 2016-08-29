@@ -4,8 +4,8 @@ android:background="@drawable/list_item_bg"
 android:layout_height="72dp">
 <ImageView
       android:id="@+id/list_icon"
-      android:layout_width="48dp"
-      android:layout_height="48dp"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
       android:layout_margin="6dp"
       android:src="@drawable/listitem"
       android:background="@drawable/list_icon_bg"/>
@@ -21,11 +21,19 @@ android:layout_height="72dp">
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#000000"
-        android:textSize="12dp"
+        android:textSize="1dp"
         android:paddingRight="6dp"
         android:text="" />
     <TextView
         android:id="@+id/DictonaryRowWord"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#757575"
+        android:textSize="12dp"
+        android:paddingRight="6dp"
+        android:text="Sample Text" />
+  <TextView
+        android:id="@+id/DictonaryRowToWord"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#757575"

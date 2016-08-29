@@ -120,7 +120,7 @@ namespace Mirapp
             callDialog.SetNeutralButton("End Game",
                                                delegate
                                                {
-                                                    LoadMain();
+                                                    GameOverAction();
                                                }
                                          );
             callDialog.SetNegativeButton("Cancel", delegate { });
@@ -317,12 +317,8 @@ namespace Mirapp
         {
             var intent = new Intent();
             intent.SetClass(this, typeof(DictionaryGameOverActivity));
-            //intent.PutExtra("TryCount", TryCount);
-            //intent.PutExtra("SuccessCount", SuccessCount);
-            intent.PutExtra("ElapsedMilliseconds", GameResultCalculation.ElapsedStropWatch.ElapsedMilliseconds );
             intent.PutExtra("GameLevel", GameLevel.ToString());
             intent.PutExtra("Language", Language);
-
             StartActivityForResult(intent, 100);
             DictionaryGameResult.Text = GameResultCalculation.Result;
 

@@ -35,7 +35,9 @@ namespace Mirapp
         {
             View view = convertView ?? context.LayoutInflater.Inflate(Resource.Layout.DictionaryListRow, null); 
             view.FindViewById<TextView>(Resource.Id.DictonaryRowWordID).Text = items[position].ID.ToString();
-            view.FindViewById<TextView>(Resource.Id.DictonaryRowWord).Text = items[position].ToString().ToUpper();
+            view.FindViewById<TextView>(Resource.Id.DictonaryRowWord).Text = items[position].Word.ToUpper();
+            view.FindViewById<TextView>(Resource.Id.DictonaryRowToWord).Text = items[position].TranslatedWord.ToUpper();
+            
             return view;
         }
 
