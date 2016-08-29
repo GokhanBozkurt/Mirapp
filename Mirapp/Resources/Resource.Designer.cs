@@ -67,19 +67,34 @@ namespace Mirapp
 			public const int book48 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int icon = 2130837506;
+			public const int delete = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int list_icon_bg = 2130837507;
+			public const int delete2 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int list_item_bg = 2130837508;
+			public const int delete3 = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int listitem = 2130837509;
+			public const int edit = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int logo = 2130837510;
+			public const int icon = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int list_icon_bg = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int list_item_bg = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int listitem = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int logo = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int trash = 2130837515;
 			
 			static Drawable()
 			{
@@ -94,23 +109,23 @@ namespace Mirapp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060012
-			public const int DictionaryAddButton = 2131099666;
+			// aapt resource value: 0x7f060017
+			public const int DictionaryAddButton = 2131099671;
 			
-			// aapt resource value: 0x7f060013
-			public const int DictionaryDeleteButton = 2131099667;
+			// aapt resource value: 0x7f060018
+			public const int DictionaryDeleteButton = 2131099672;
 			
-			// aapt resource value: 0x7f060021
-			public const int DictionaryEasyGameStartButton = 2131099681;
+			// aapt resource value: 0x7f060026
+			public const int DictionaryEasyGameStartButton = 2131099686;
 			
-			// aapt resource value: 0x7f06001f
-			public const int DictionaryGameEndButton = 2131099679;
+			// aapt resource value: 0x7f060024
+			public const int DictionaryGameEndButton = 2131099684;
 			
-			// aapt resource value: 0x7f060015
-			public const int DictionaryGameError = 2131099669;
+			// aapt resource value: 0x7f06001a
+			public const int DictionaryGameError = 2131099674;
 			
-			// aapt resource value: 0x7f060016
-			public const int DictionaryGameFROMButton = 2131099670;
+			// aapt resource value: 0x7f06001b
+			public const int DictionaryGameFROMButton = 2131099675;
 			
 			// aapt resource value: 0x7f060007
 			public const int DictionaryGameOverResult = 2131099655;
@@ -133,83 +148,98 @@ namespace Mirapp
 			// aapt resource value: 0x7f060002
 			public const int DictionaryGameOverResultTryCount = 2131099650;
 			
-			// aapt resource value: 0x7f06001e
-			public const int DictionaryGameResult = 2131099678;
+			// aapt resource value: 0x7f060023
+			public const int DictionaryGameResult = 2131099683;
 			
-			// aapt resource value: 0x7f060020
-			public const int DictionaryGameSpinner = 2131099680;
+			// aapt resource value: 0x7f060025
+			public const int DictionaryGameSpinner = 2131099685;
 			
 			// aapt resource value: 0x7f060006
 			public const int DictionaryGameStartAgainButton = 2131099654;
 			
-			// aapt resource value: 0x7f06001d
-			public const int DictionaryGameTime = 2131099677;
-			
-			// aapt resource value: 0x7f060017
-			public const int DictionaryGameToButton1 = 2131099671;
-			
-			// aapt resource value: 0x7f060018
-			public const int DictionaryGameToButton2 = 2131099672;
-			
-			// aapt resource value: 0x7f060019
-			public const int DictionaryGameToButton3 = 2131099673;
-			
-			// aapt resource value: 0x7f06001a
-			public const int DictionaryGameToButton4 = 2131099674;
-			
-			// aapt resource value: 0x7f06001b
-			public const int DictionaryGameToButton5 = 2131099675;
+			// aapt resource value: 0x7f060022
+			public const int DictionaryGameTime = 2131099682;
 			
 			// aapt resource value: 0x7f06001c
-			public const int DictionaryGameToButton6 = 2131099676;
+			public const int DictionaryGameToButton1 = 2131099676;
 			
-			// aapt resource value: 0x7f060023
-			public const int DictionaryHardGameStartButton = 2131099683;
+			// aapt resource value: 0x7f06001d
+			public const int DictionaryGameToButton2 = 2131099677;
+			
+			// aapt resource value: 0x7f06001e
+			public const int DictionaryGameToButton3 = 2131099678;
+			
+			// aapt resource value: 0x7f06001f
+			public const int DictionaryGameToButton4 = 2131099679;
+			
+			// aapt resource value: 0x7f060020
+			public const int DictionaryGameToButton5 = 2131099680;
+			
+			// aapt resource value: 0x7f060021
+			public const int DictionaryGameToButton6 = 2131099681;
+			
+			// aapt resource value: 0x7f060028
+			public const int DictionaryHardGameStartButton = 2131099688;
+			
+			// aapt resource value: 0x7f06000f
+			public const int DictionaryListRowDelete = 2131099663;
+			
+			// aapt resource value: 0x7f060011
+			public const int DictionaryListRowEdit = 2131099665;
 			
 			// aapt resource value: 0x7f060008
 			public const int DictionaryMainButton = 2131099656;
 			
-			// aapt resource value: 0x7f060022
-			public const int DictionaryMiddleGameStartButton = 2131099682;
-			
-			// aapt resource value: 0x7f06000c
-			public const int DictonaryRowToWord = 2131099660;
-			
-			// aapt resource value: 0x7f06000b
-			public const int DictonaryRowWord = 2131099659;
-			
-			// aapt resource value: 0x7f06000a
-			public const int DictonaryRowWordID = 2131099658;
+			// aapt resource value: 0x7f060027
+			public const int DictionaryMiddleGameStartButton = 2131099687;
 			
 			// aapt resource value: 0x7f06000d
-			public const int FROMText = 2131099661;
+			public const int DictonaryRowToWord = 2131099661;
 			
-			// aapt resource value: 0x7f060024
-			public const int Listview1 = 2131099684;
+			// aapt resource value: 0x7f06000c
+			public const int DictonaryRowWord = 2131099660;
+			
+			// aapt resource value: 0x7f06000b
+			public const int DictonaryRowWordID = 2131099659;
+			
+			// aapt resource value: 0x7f060012
+			public const int FROMText = 2131099666;
+			
+			// aapt resource value: 0x7f06000a
+			public const int LinearLayoutDictionaryListRow = 2131099658;
+			
+			// aapt resource value: 0x7f06000e
+			public const int LinearLayoutDictionaryListRowButtonDelete = 2131099662;
 			
 			// aapt resource value: 0x7f060010
-			public const int TOText = 2131099664;
+			public const int LinearLayoutDictionaryListRowButtonEdit = 2131099664;
+			
+			// aapt resource value: 0x7f060029
+			public const int Listview1 = 2131099689;
+			
+			// aapt resource value: 0x7f060015
+			public const int TOText = 2131099669;
+			
+			// aapt resource value: 0x7f060019
+			public const int TranslateButton = 2131099673;
+			
+			// aapt resource value: 0x7f060016
+			public const int TranslatedWordText = 2131099670;
 			
 			// aapt resource value: 0x7f060014
-			public const int TranslateButton = 2131099668;
+			public const int WordTextAutoComplete = 2131099668;
 			
-			// aapt resource value: 0x7f060011
-			public const int TranslatedWordText = 2131099665;
-			
-			// aapt resource value: 0x7f06000f
-			public const int WordTextAutoComplete = 2131099663;
-			
-			// aapt resource value: 0x7f060025
-			public const int fragmentContainer = 2131099685;
+			// aapt resource value: 0x7f06002a
+			public const int fragmentContainer = 2131099690;
 			
 			// aapt resource value: 0x7f060009
 			public const int list_icon = 2131099657;
 			
-			// aapt resource value: 0x7f060026
-			public const int sampleTextView = 2131099686;
+			// aapt resource value: 0x7f06002b
+			public const int sampleTextView = 2131099691;
 			
-			// aapt resource value: 0x7f06000e
-			public const int spinner = 2131099662;
+			// aapt resource value: 0x7f060013
+			public const int spinner = 2131099667;
 			
 			static Id()
 			{

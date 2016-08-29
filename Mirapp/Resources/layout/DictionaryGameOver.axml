@@ -2,95 +2,96 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"  >
-  <TextView
-      android:textSize="15dp"
-      android:textColor="@android:color/white"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content" />
-  <TextView
-   android:textSize="20dp"
-   android:textColor="#E3F2FD"
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:id="@+id/DictionaryGameOverResultGameLevel" />
-  <TextView
-     android:textSize="10dp"
-     android:textColor="@android:color/white"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" />
-  <TextView
-   android:textSize="20dp"
-   android:textColor="#E3F2FD"
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:id="@+id/DictionaryGameOverResultLanguage" />
-  <TextView
-     android:textSize="10dp"
-     android:textColor="@android:color/white"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" />
-  <TextView
-     android:textSize="20dp"
-     android:textColor="#E3F2FD"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content"
-     android:id="@+id/DictionaryGameOverResultTryCount" />
-  <TextView
-     android:textSize="10dp"
-     android:textColor="@android:color/white"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" />
-  <TextView
-     android:textSize="20dp"
-     android:textColor="#E3F2FD"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content"
-     android:id="@+id/DictionaryGameOverResultSuccessCount" />
-  <TextView
-     android:textSize="10dp"
-     android:textColor="@android:color/white"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" />
-  <TextView
-     android:textSize="20dp"
-     android:textColor="#E3F2FD"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" android:layout_centerHorizontal="true"
-     android:id="@+id/DictionaryGameOverResultSuccessPercentage" />
-  <TextView
-   android:textSize="10dp"
-   android:textColor="@android:color/white"
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content" />
-  <TextView
-   android:textSize="20dp"
-   android:textColor="#E3F2FD"
-   android:layout_width="fill_parent"
-   android:layout_height="wrap_content"
-   android:id="@+id/DictionaryGameOverResultSuccessTime" />
-  <TextView
-     android:textSize="25dp"
-     android:textColor="@android:color/white"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content" />
-  <Button
-      android:text="START AGAIN"
-      android:textSize="17dp"
-      android:background="#E91E63"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/DictionaryGameStartAgainButton" />
-  <TextView
-     android:textSize="15dp"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content"
-     android:id="@+id/DictionaryGameOverResult" />
-  <Button
-     android:text="Main Page"
-     android:textSize="17dp"
-     android:background="#E91E63"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:id="@+id/DictionaryMainButton" />
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResultGameLevel" />
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResultLanguage" />
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResultTryCount" />
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResultSuccessCount" />
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/DictionaryGameOverResultSuccessPercentage" />
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="20dp"
+        android:textColor="#E3F2FD"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResultSuccessTime" />
+    <TextView
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="START AGAIN"
+        android:textSize="17dp"
+        android:background="#E91E63"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameStartAgainButton" />
+    <TextView
+        android:textSize="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryGameOverResult" />
+    <Button
+        android:text="Main Page"
+        android:textSize="17dp"
+        android:background="#E91E63"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DictionaryMainButton" />
 </LinearLayout>

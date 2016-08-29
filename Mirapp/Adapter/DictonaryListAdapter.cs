@@ -41,5 +41,8 @@ namespace Mirapp
             return view;
         }
 
+        public void Remove(long id)
+        {
+        }
     }
 }

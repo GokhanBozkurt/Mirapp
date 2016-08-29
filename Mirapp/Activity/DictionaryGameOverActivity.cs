@@ -15,8 +15,9 @@ namespace Mirapp
         private TextView DictionaryGameOverResultSuccessTime;
         private TextView DictionaryGameOverResultLanguage;
         private TextView DictionaryGameOverResultGameLevel;
-        
         private Button DictionaryGameStartAgainButton;
+        private Button DictionaryMainButton;
+        
         //private int TryCount;
         //private int SuccessCount;
         //private long ElapsedMilliseconds;
@@ -55,6 +56,14 @@ namespace Mirapp
         private void HandleEvents()
         {
             DictionaryGameStartAgainButton.Click += DictionaryGameStartAgainButton_Click;
+            DictionaryMainButton.Click += DictionaryMainButton_Click;
+        }
+
+        private void DictionaryMainButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent();
+            intent.SetClass(this, typeof(MainActivity));
+            StartActivityForResult(intent, 100);
         }
 
         private void DictionaryGameStartAgainButton_Click(object sender, EventArgs e)
@@ -76,6 +85,8 @@ namespace Mirapp
             DictionaryGameOverResultLanguage = FindViewById<TextView>(Mirapp.Resource.Id.DictionaryGameOverResultLanguage);
             DictionaryGameOverResultGameLevel = FindViewById<TextView>(Mirapp.Resource.Id.DictionaryGameOverResultGameLevel);
             DictionaryGameStartAgainButton = FindViewById<Button>(Mirapp.Resource.Id.DictionaryGameStartAgainButton);
+            DictionaryMainButton = FindViewById<Button>(Mirapp.Resource.Id.DictionaryMainButton);
+            
         }
     }
 }

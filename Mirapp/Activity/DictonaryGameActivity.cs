@@ -60,7 +60,7 @@ namespace Mirapp
             GameResultCalculation.TryCount = 0;
             GameResultCalculation.SuccessCount = 0;
             ListDictonaryWords = null;
-            GameResultCalculation.ElapsedStropWatch.Stop(); ;
+            GameResultCalculation.ElapsedStropWatch.Reset();
 
             ReadIntentExtras();
 
