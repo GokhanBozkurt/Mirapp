@@ -13,7 +13,7 @@ namespace Mirapp
     public class DictionaryGameFragment : BaseFragment
     {
         private Button DictionaryEasyGameStartButton;
-        private Button DictionaryMiddleGameStartButton;
+        private Button DictionaryMediumGameStartButton;
         private Button DictionaryHardGameStartButton;
         private Spinner DictionaryGameSpinner;
 
@@ -44,14 +44,14 @@ namespace Mirapp
         {
             DictionaryGameSpinner = View.FindViewById<Spinner>(Mirapp.Resource.Id.DictionaryGameSpinner);
             DictionaryEasyGameStartButton = View.FindViewById<Button>(Mirapp.Resource.Id.DictionaryEasyGameStartButton);
-            DictionaryMiddleGameStartButton = View.FindViewById<Button>(Mirapp.Resource.Id.DictionaryMiddleGameStartButton);
+            DictionaryMediumGameStartButton = View.FindViewById<Button>(Mirapp.Resource.Id.DictionaryMediumGameStartButton);
             DictionaryHardGameStartButton = View.FindViewById<Button>(Mirapp.Resource.Id.DictionaryHardGameStartButton);
         }
 
         protected override void HandleEvents()
         {
             DictionaryEasyGameStartButton.Click += DictionaryEasyGameStartButtonClick;
-            DictionaryMiddleGameStartButton.Click += DictionaryMiddleGameStartButtonClick;
+            DictionaryMediumGameStartButton.Click += DictionaryMediumGameStartButtonClick;
             DictionaryHardGameStartButton.Click += DictionaryHardGameStartButtonClick;
 
         }
@@ -61,9 +61,9 @@ namespace Mirapp
         {
             StartGame(GameLevels.Easy);
         }
-        private void DictionaryMiddleGameStartButtonClick(object sender, EventArgs e)
+        private void DictionaryMediumGameStartButtonClick(object sender, EventArgs e)
         {
-            StartGame(GameLevels.Middle);
+            StartGame(GameLevels.Medium);
         }
         private void DictionaryHardGameStartButtonClick(object sender, EventArgs e)
         {
@@ -88,10 +88,6 @@ namespace Mirapp
                 toast.Show();
             }
         }
-
-        
-
-        
 
         private void LoadViews()
         {

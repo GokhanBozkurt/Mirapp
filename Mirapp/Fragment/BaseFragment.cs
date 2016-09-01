@@ -23,6 +23,7 @@ namespace Mirapp
             listView = this.View.FindViewById<ListView>(Mirapp.Resource.Id.Listview1);
             listView.ChoiceMode = ChoiceMode.Single;
 
+
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -165,7 +164,7 @@ namespace Mirapp
 
                 if (ListDictonaryWords == null)
                 {
-                    ListDictonaryWords = PrepareWordList(repository.GetRecords(), dictonaryWords);
+                    ListDictonaryWords = DictonaryManager.PrepareWordList(repository.GetRecords(), dictonaryWords);
                     if (ListDictonaryWords.Count < 4)
                     {
                         var toast = Toast.MakeText(this, "Please enter word. There is not enough WordList for starting game.", ToastLength.Short);
@@ -180,14 +179,14 @@ namespace Mirapp
 
                 VisibleClearForm(GameLevel);
 
-                var RandomWords = PrepareWordList(repository.GetRecords(), dictonaryWords);
+                var RandomWords = DictonaryManager.PrepareWordList(repository.GetRecords(), dictonaryWords);
 
                 switch (GameLevel)
                 {
                     case GameLevels.Easy:
                         ListButton = GenerateRandom(4);
                         break;
-                    case GameLevels.Middle:
+                    case GameLevels.Medium:
                         ListButton = GenerateRandom(5);
                         break;
                     case GameLevels.Hard:
@@ -238,7 +237,7 @@ namespace Mirapp
             randomButton.Text = RandomWords[randomNumber].TranslatedWord;
             RandomWords.RemoveAt(randomNumber);
 
-            if ((GameLevel == GameLevels.Middle) || (GameLevel == GameLevels.Hard))
+            if ((GameLevel == GameLevels.Medium) || (GameLevel == GameLevels.Hard))
             {
                 randomNumber = random.Next(RandomWords.Count);
                 randomButton = GetRandomButton(ListButton[4]);
@@ -284,27 +283,6 @@ namespace Mirapp
             }
         }
 
-        
-        private List<DictonaryWords> PrepareWordList(List<DictonaryWords> listWords, DictonaryWords words)
-        {
-            var lst = new List<DictonaryWords>();
-            foreach (DictonaryWords item in listWords)
-            {
-                if (item.Language != words.Language)
-                {
-                    lst.Add(new DictonaryWords()
-                    {
-                        ID = item.ID, Word = item.TranslatedWord, TranslatedWord = item.Word, Language = item.Language
-                    });
-                }
-                else
-                {
-                    lst.Add(item);
-                }
-            }
-
-            return lst;
-        }
 
         private void SuccesAction()
         {
@@ -356,7 +334,7 @@ namespace Mirapp
                 DictionaryGameToButton5.Visibility = ViewStates.Invisible;
                 DictionaryGameToButton6.Visibility = ViewStates.Invisible;
             }
-            if (gameLevel==GameLevels.Middle)
+            if (gameLevel==GameLevels.Medium)
             {
                 DictionaryGameToButton5.Visibility = ViewStates.Visible;
                 DictionaryGameToButton6.Visibility = ViewStates.Invisible;
@@ -450,36 +428,5 @@ namespace Mirapp
             }
             return returnListlis;
         }
-    }
-
-    public class GameResultCalculation
-    {
-        public static Stopwatch ElapsedStropWatch=new Stopwatch();
-
-        public static int TryCount { get; set; }
-        public static int SuccessCount { get; set; }
-
-        public static decimal SuccessPercentage
-        {
-            get
-            {
-                try
-                {
-                    if (TryCount == 0)
-                    {
-                        return 0;
-                    }
-                    return 100 * Math.Round(Convert.ToDecimal(SuccessCount) / Convert.ToDecimal(TryCount), 2);
-                }
-                catch (Exception)
-                {
-                    return 0;
-                }
-            }
-        }
-
-        public static string Result => $"Try : {TryCount} Second:{ElapsedStropWatch.ElapsedMilliseconds/1000}  Sucess: %{SuccessPercentage} ";
-
-        public static string ResultInGame (int ListCount) => String.Format("%{0} Success  {1} Words Remained", SuccessPercentage, ListCount);
     }
 }

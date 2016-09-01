@@ -19,6 +19,9 @@ namespace Mirapp
         private Repository<DictonaryWords> repository = new Repository<DictonaryWords>();
         private List<DictonaryWords> ListDictonaryWords;
         private DictonaryListAdapter _dictonaryListAdapter;
+        private Spinner ListLangugaeSpinner;
+        private TextView ListCount;
+        public ISpinnerAdapter LanguageAdapter { get; set; }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
@@ -30,6 +33,8 @@ namespace Mirapp
 
             SetRepository();
 
+            SpecialView();
+
             LoadList();
 
             if (listView != null)
@@ -37,6 +42,21 @@ namespace Mirapp
                 listView.ItemLongClick += listView_ItemLongClick;
             }
         }
+
+        protected void SpecialView()
+        {
+            ListLangugaeSpinner= View.FindViewById<Spinner>(Mirapp.Resource.Id.ListLangugaeSpinner);
+            ListCount = View.FindViewById<TextView>(Mirapp.Resource.Id.ListCount);
+
+            ListLangugaeSpinner.ItemSelected += (sender, args) =>
+                                                                    {
+                                                                        LoadList();
+                                                                    };
+            LanguageAdapter = AdapterBoss.GetLanguageAdapter(this.Activity);
+            ListLangugaeSpinner.Adapter = LanguageAdapter;
+        }
+
+
 
         private void listView_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
@@ -111,11 +131,36 @@ namespace Mirapp
 
         private void LoadList()
         {
-            ListDictonaryWords = repository.GetRecords();
+            var dictonaryWords = new DictonaryWords()
+            {
+                Language = GetLanguage
+            };
+
+            ListDictonaryWords = DictonaryManager.PrepareWordList(repository.GetRecords(), dictonaryWords);
+
             if (ListDictonaryWords != null)
             {
                 _dictonaryListAdapter = new DictonaryListAdapter(this.Activity, ListDictonaryWords.OrderBy(a=>a.Language).ThenBy(b=>b.Word).ThenBy(c=>c.TranslatedWord).ToList());
                 listView.Adapter = _dictonaryListAdapter;
+                ListCount.Text = $"{ListDictonaryWords.Count} Word";
+            }
+        }
+
+        public string GetLanguage
+        {
+            get
+            {
+                string language;
+                try
+                {
+                    language = ListLangugaeSpinner.SelectedItem.ToString();
+                }
+                catch (System.Exception ex)
+                {
+
+                    language = LanguageAdapter.GetItem(LanguageAdapter.Count).ToString();
+                }
+                return language;
             }
         }
     }

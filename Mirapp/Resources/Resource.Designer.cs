@@ -191,7 +191,7 @@ namespace Mirapp
 			public const int DictionaryMainButton = 2131099656;
 			
 			// aapt resource value: 0x7f060027
-			public const int DictionaryMiddleGameStartButton = 2131099687;
+			public const int DictionaryMediumGameStartButton = 2131099687;
 			
 			// aapt resource value: 0x7f06000d
 			public const int DictonaryRowToWord = 2131099661;
@@ -214,8 +214,20 @@ namespace Mirapp
 			// aapt resource value: 0x7f060010
 			public const int LinearLayoutDictionaryListRowButtonEdit = 2131099664;
 			
+			// aapt resource value: 0x7f06002b
+			public const int LinearListCount = 2131099691;
+			
 			// aapt resource value: 0x7f060029
-			public const int Listview1 = 2131099689;
+			public const int LinearListLangugaeSpinner = 2131099689;
+			
+			// aapt resource value: 0x7f06002c
+			public const int ListCount = 2131099692;
+			
+			// aapt resource value: 0x7f06002a
+			public const int ListLangugaeSpinner = 2131099690;
+			
+			// aapt resource value: 0x7f06002d
+			public const int Listview1 = 2131099693;
 			
 			// aapt resource value: 0x7f060015
 			public const int TOText = 2131099669;
@@ -229,14 +241,14 @@ namespace Mirapp
 			// aapt resource value: 0x7f060014
 			public const int WordTextAutoComplete = 2131099668;
 			
-			// aapt resource value: 0x7f06002a
-			public const int fragmentContainer = 2131099690;
+			// aapt resource value: 0x7f06002e
+			public const int fragmentContainer = 2131099694;
 			
 			// aapt resource value: 0x7f060009
 			public const int list_icon = 2131099657;
 			
-			// aapt resource value: 0x7f06002b
-			public const int sampleTextView = 2131099691;
+			// aapt resource value: 0x7f06002f
+			public const int sampleTextView = 2131099695;
 			
 			// aapt resource value: 0x7f060013
 			public const int spinner = 2131099667;

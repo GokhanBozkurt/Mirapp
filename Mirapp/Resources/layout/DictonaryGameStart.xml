@@ -37,12 +37,12 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content" />
   <Button
-       android:text="MIDDLE"
+       android:text="Medium"
        android:textSize="17dp"
        android:background="#E91E63"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/DictionaryMiddleGameStartButton" />
+       android:id="@+id/DictionaryMediumGameStartButton" />
   <TextView
       android:background="#FFFFFF"
       android:textSize="15dp"

@@ -66,10 +66,13 @@
     <Compile Include="Activity\DictionaryActivity.cs" />
     <Compile Include="Activity\DictionaryGameOverActivity.cs" />
     <Compile Include="Activity\DictonaryGameActivity.cs" />
+    <Compile Include="Activity\DictonaryManager.cs" />
+    <Compile Include="Activity\GameResultCalculation.cs" />
     <Compile Include="Adapter\DictonaryListAdapter.cs" />
     <Compile Include="Data\DictonaryWords.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Data\SQLite.cs" />
+    <Compile Include="Fragment\AdapterBoss.cs" />
     <Compile Include="Fragment\BaseFragment.cs" />
     <Compile Include="RestService\TranslateService\Control.cs" />
     <Compile Include="Fragment\DictionaryGameFragment.cs" />

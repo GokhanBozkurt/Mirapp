@@ -2,7 +2,7 @@ namespace Mirapp
 {
     public enum GameLevels
     {
-        Easy,Middle,Hard
+        Easy,Medium,Hard
     }
 
     public static class GameLevelOperation
@@ -13,8 +13,8 @@ namespace Mirapp
             {
                 case "Easy":
                     return GameLevels.Easy;
-                case "Middle":
-                    return GameLevels.Middle;
+                case "Medium":
+                    return GameLevels.Medium;
                 case "Hard":
                     return GameLevels.Hard;
                 default:
