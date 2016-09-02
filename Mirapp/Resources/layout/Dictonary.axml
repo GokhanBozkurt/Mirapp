@@ -20,7 +20,7 @@
         android:id="@+id/spinner"
         android:background="#757575"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:prompt="@string/language_prompt" />
     <TextView
         android:background="#FFFFFF"

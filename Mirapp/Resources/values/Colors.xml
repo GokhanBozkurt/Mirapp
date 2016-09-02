@@ -31,4 +31,7 @@
     <color name="background_new_tag">#ff0000</color>
     <color name="text_new_tag">#ffffff</color>
 
+  <color name="GameOverButton">#4fc3f7</color>
+  
+
 </resources>

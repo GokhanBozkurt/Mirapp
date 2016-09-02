@@ -3,6 +3,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+  <TextView
+        android:text="GAME OVER!!!"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+  
     <TextView
         android:textSize="15dp"
         android:textColor="@android:color/white"
@@ -78,7 +86,7 @@
     <Button
         android:text="START AGAIN"
         android:textSize="17dp"
-        android:background="#E91E63"
+        android:background="@color/GameOverButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/DictionaryGameStartAgainButton" />
@@ -90,7 +98,7 @@
     <Button
         android:text="Main Page"
         android:textSize="17dp"
-        android:background="#E91E63"
+       android:background="@color/GameOverButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/DictionaryMainButton" />

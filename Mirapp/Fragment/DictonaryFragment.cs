@@ -36,9 +36,7 @@ namespace Mirapp
         {
             repository = new Repository<DictonaryWords>();
             repository.Open();
-            //repository.DeleteTable();
             repository.CreateTable();
-
             wordList = repository.GetRecords();
         }
 
@@ -115,7 +113,7 @@ namespace Mirapp
                 return false;
             }
 
-            var count = wordList.Where(a => a.Word.Trim() == WordText.Text.Trim()).Select(b => b.TranslatedWord).Count();
+            var count = wordList.Where(a => a.Word.Trim() == WordText.Text.Trim()  && a.TranslatedWord.Trim() == TranslatedWordText.Text.Trim()).Select(b => b.TranslatedWord).Count();
             if (count > 0)
             {
                 var toast = Toast.MakeText(this.Activity, "This word avaliable in dictonary", ToastLength.Short);

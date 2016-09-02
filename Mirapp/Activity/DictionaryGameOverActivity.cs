@@ -18,9 +18,6 @@ namespace Mirapp
         private Button DictionaryGameStartAgainButton;
         private Button DictionaryMainButton;
         
-        //private int TryCount;
-        //private int SuccessCount;
-        //private long ElapsedMilliseconds;
         public string Language { get; set; }
 
         public GameLevels GameLevel { get; set; }
@@ -42,8 +39,6 @@ namespace Mirapp
         {
             GameLevel = GameLevelOperation.GetGameLevel(Intent.Extras.GetString("GameLevel"));
             Language = Intent.Extras.GetString("Language");
-
-
             DictionaryGameOverResultGameLevel.Text = String.Format("Level    : {0}", GameLevel);
             DictionaryGameOverResultLanguage.Text = String.Format("Language    : {0}", Language);
             DictionaryGameOverResultTryCount.Text = String.Format("Try Count   : {0}", GameResultCalculation.TryCount);

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -17,36 +19,47 @@ namespace Mirapp
         private DictonaryWords item = new DictonaryWords();
         private Repository<DictonaryWords> repository;
         private Button DictionaryDeleteButton;
+        private List<DictonaryWords> wordList;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
             SetContentView(Resource.Layout.Dictonary);
 
             FindViews();
 
-            HandleEvents();            
+            HandleEvents();
 
-            if (Intent.Extras.GetInt("wordId") != 0)
-            {
-                item =new DictonaryWords() {ID = Intent.Extras.GetInt("wordId") };
-                repository=new Repository<DictonaryWords>();
-                item= repository.GetRecord(item);
-                WordText.Text = item.Word;
-                TranslatedWordText.Text = item.TranslatedWord;
+            SetRepository();
 
-                DictionaryAddButton.Text = "UPDATE";
-                spinner.Visibility=ViewStates.Invisible;
-                DictionaryDeleteButton.Visibility=ViewStates.Visible;
-            }
+            LoadViews();
 
-
-
+            SetWord();
         }
 
-        
+        private void SetWord()
+        {
+            if (Intent.Extras.GetInt("wordId") != 0)
+            {
+                item = new DictonaryWords() {ID = Intent.Extras.GetInt("wordId")};
+                item = repository.GetRecord(item);
+                WordText.Text = item.Word;
+                TranslatedWordText.Text = item.TranslatedWord;
+                DictionaryAddButton.Text = "UPDATE";
+                spinner.SetSelection(1);
+                DictionaryDeleteButton.Visibility = ViewStates.Visible;
+            }
+        }
+
+        private void SetRepository()
+        {
+            repository = new Repository<DictonaryWords>();
+            repository.Open();
+            repository.CreateTable();
+            wordList = repository.GetRecords();
+        }
+
 
         protected void FindViews()
         {
@@ -63,6 +76,15 @@ namespace Mirapp
             DictionaryDeleteButton.Click += DictionaryDeleteButton_Click;
         }
 
+        private void LoadViews()
+        {
+            var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.Languages, Android.Resource.Layout.SimpleSpinnerItem);
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner.Adapter = adapter;
+
+            adapter = new ArrayAdapter<String>(this, Resource.Layout.WordListItem, wordList.Select(a => a.Word).ToList());
+            WordText.Adapter = adapter;
+        }
         private void DictionaryDeleteButton_Click(object sender, EventArgs e)
         {
             if (repository.Delete(item))
